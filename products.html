@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Classes | JeYOGA</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .products-page {
+            background: #FBF8F1;
+            color: #284B38;
+        }
+
+        .class-hero {
+            padding: 75px 8%;
+            text-align: center;
+            background: #F3E8D5;
+        }
+
+        .class-hero span {
+            color: #B87545;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .class-hero h2 {
+            font-size: clamp(34px, 5vw, 52px);
+            margin: 18px 0;
+        }
+
+        .class-hero p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.9;
+        }
+
+        .class-section {
+            padding: 60px 8%;
+        }
+
+        .class-heading {
+            margin-bottom: 30px;
+        }
+
+        .class-heading h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .class-heading p {
+            line-height: 1.8;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .class-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #E8DFD1;
+            transition: 0.3s ease;
+        }
+
+        .class-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(40, 75, 56, 0.12);
+        }
+
+        .class-image {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            background: #E9EBDD;
+        }
+
+        .class-info {
+            padding: 23px;
+        }
+
+        .class-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #E9EBDD;
+            color: #284B38;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .class-info h3 {
+            font-size: 22px;
+            margin: 15px 0 10px;
+        }
+
+        .class-info p {
+            font-size: 14px;
+            line-height: 1.8;
+            min-height: 75px;
+        }
+
+        .class-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 18px 0;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .class-details span {
+            padding: 7px 10px;
+            background: #F6F1E8;
+            border-radius: 20px;
+        }
+
+        .class-price {
+            color: #B87545;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 18px 0;
+        }
+
+        .class-price small {
+            font-size: 12px;
+            color: #777;
+            font-weight: normal;
+        }
+
+        .class-button {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 25px;
+            background: #284B38;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .class-button:hover {
+            background: #C87941;
+        }
+
+        .class-note {
+            margin-top: 35px;
+            padding: 25px;
+            background: #E9EBDD;
+            border-radius: 16px;
+            line-height: 1.8;
+        }
+
+        .class-cta {
+            padding: 65px 8%;
+            text-align: center;
+            background: #284B38;
+            color: white;
+        }
+
+        .class-cta h2 {
+            color: #F3E8D5;
+            font-size: clamp(28px, 4vw, 40px);
+        }
+
+        .class-cta p {
+            line-height: 1.8;
+        }
+
+        .class-cta a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 26px;
+            border-radius: 30px;
+            background: #C87941;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 900px) {
+            .class-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .class-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .class-hero {
+                padding: 50px 6%;
+            }
+
+            .class-section {
+                padding: 45px 6%;
+            }
+
+            .class-info p {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="products-page">
+
+    <header>
+        <div class="container">
+            <h1>JeYOGA</h1>
+            <p>Find Your Flow, Wherever You Are</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="profil.html">Profil</a>
+                <a href="products.html">Products</a>
+                <a href="space.html">Yoga Space</a>
+                <a href="how-to-order.html">How To Order</a>
+                             <a href="kontak.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="class-hero">
+            <span>DISCOVER YOUR PRACTICE</span>
+            <h2>Find Your Flow.</h2>
+            <p>
+                 Temukan kelas yoga yang sesuai dengan kebutuhanmu,
+                mulai dari gerakan yang lembut hingga latihan yang dinamis.
+            </p>
+        </section>
+
+        <!-- CLASS LIST -->
+        <section class="class-section">
+
+            <div class="class-heading">
+                <h2>Our Yoga Classes</h2>
+                <p>Pilih kelas favoritmu dan mulai perjalanan bersama JeYOGA.</p>
+            </div>
+
+            <div class="class-grid">
+
+                <!-- HATHA YOGA -->
+                <div class="class-card">
+                    <img
+                        src="Hatha.jpeg"
+                        alt="Hatha Yoga"
+                        class="class-image">
+
+                    <div class="class-info">
+                        <span class="class-tag">BEGINNER FRIENDLY</span>
+                        <h3>Hatha Yoga</h3>
+                        <p>
+                            Latihan dengan gerakan dasar, postur,
+                            dan pengaturan napas untuk membangun
+                            keseimbangan serta fleksibilitas tubuh.
+                        </p>
+
+                        <div class="class-details">
+                            <span>⏱ 60 menit</span>
+                            <span>🌿 Pemula</span>
+                        </div>
+
+                        <div class="class-price">
+                            Rp110.000 <small>/ sesi</small>
+                        </div>
+
+                        <a href="how-to-order.html" class="class-button">
+                            Book This Class
+                        </a>
+                    </div>
+                </div>
+
+                <!-- VINYASA YOGA -->
+                <div class="class-card">
+                    <img
+                        src="Vinyasa.jpeg"
+                        alt="Vinyasa Yoga"
+                        class="class-image">
+
+                    <div class="class-info">
+                        <span class="class-tag">DYNAMIC FLOW</span>
+                        <h3>Vinyasa Yoga</h3>
+                        <p>
+                            Gerakan yoga yang mengalir mengikuti
+                            irama pernapasan untuk menciptakan
+                            latihan yang dinamis dan terkoordinasi.
+                        </p>
+
+                        <div class="class-details">
+                            <span>⏱ 60 menit</span>
+                            <span>🌿 Menengah</span>
+                        </div>
+
+                        <div class="class-price">
+                            Rp130.000 <small>/ sesi</small>
+                        </div>
+
+                        <a href="how-to-order.html" class="class-button">
+                            Book This Class
+                        </a>
+                    </div>
+                </div>
+
+                <!-- YIN YOGA -->
+                <div class="class-card">
+                    <img
+                        src="Yin.jpeg"
+                        alt="Yin Yoga"
+                        class="class-image">
+
+                    <div class="class-info">
+                        <span class="class-tag">SLOW & MINDFUL</span>
+                        <h3>Yin Yoga</h3>
+                        <p>
+                            Latihan dengan tempo lambat dan posisi
+                            yang dipertahankan untuk mendukung
+                            relaksasi serta kesadaran tubuh.
+                        </p>
+
+                        <div class="class-details">
+                            <span>⏱ 60 menit</span>
+                            <span>🌿 Semua tingkat</span>
+                        </div>
+
+                        <div class="class-price">
+                            Rp115.000 <small>/ sesi</small>
+                        </div>
+
+                        <a href="how-to-order.html" class="class-button">
+                            Book This Class
+                        </a>
+                    </div>
+                </div>
+
+                <!-- POWER YOGA -->
+                <div class="class-card">
+                    <img
+                        src="power.jpeg"
+                        alt="Power Yoga"
+                        class="class-image">
+
+                    <div class="class-info">
+                        <span class="class-tag">STRENGTH & ENERGY</span>
+                        <h3>Power Yoga</h3>
+                        <p>
+                            Latihan yang lebih intens dan dinamis
+                            dengan fokus pada kekuatan, koordinasi,
+                            serta stamina tubuh.
+                        </p>
+
+                        <div class="class-details">
+                            <span>⏱ 60 menit</span>
+                            <span>🌿 Menengah–lanjut</span>
+                        </div>
+
+                        <div class="class-price">
+                            Rp170.000 <small>/ sesi</small>
+                        </div>
+
+                        <a href="how-to-order.html" class="class-button">
+                            Book This Class
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RESTORATIVE YOGA -->
+                <div class="class-card">
+                    <img
+                        src="resto.jpeg"
+                        alt="Restorative Yoga"
+                        class="class-image">
+
+                    <div class="class-info">
+                        <span class="class-tag">RELAX & RESTORE</span>
+                        <h3>Restorative Yoga</h3>
+                        <p>
+                            Latihan lembut dengan bantuan penyangga
+                            untuk membantu tubuh beristirahat
+                            dan menciptakan suasana yang tenang.
+                        </p>
+
+                        <div class="class-details">
+                            <span>⏱ 60 menit</span>
+                            <span>🌿 Semua tingkat</span>
+                        </div>
+
+                        <div class="class-price">
+                            Rp160.000 <small>/ sesi</small>
+                        </div>
+
+                        <a href="how-to-order.html" class="class-button">
+                            Book This Class
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="class-note">
+                <strong>Informasi Kelas</strong><br>
+                Jadwal kelas dan ketersediaan sesi
+                dapat disesuaikan dengan pilihan yang tersedia.
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="class-cta">
+            <h2>Your Journey Starts Here.</h2>
+            <p>
+                Luangkan waktu untuk dirimu dan temukan kelas
+                yang paling sesuai dengan kebutuhanmu.
+            </p>
+            <a href="how-to-order.html">How To Book →</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Find Your Flow, Wherever You Are.</p>
+        <p>&copy; 2026 JeYOGA. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

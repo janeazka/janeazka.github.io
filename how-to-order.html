@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Order | JeYOGA</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .order-hero {
+            background: #284B38;
+            color: #FBF8F1;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .order-hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .order-hero p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #F3E8D5;
+        }
+
+        .order-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 25px;
+        }
+
+        .order-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .order-heading h2 {
+            color: #284B38;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .order-heading p {
+            color: #68685C;
+            line-height: 1.7;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 25px;
+            border: 1px solid #E5DDCD;
+            box-shadow: 0 5px 18px rgba(40, 75, 56, 0.07);
+        }
+
+        .step-number {
+            background: #C87941;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            color: #284B38;
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            color: #68685C;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .order-form-section {
+            background: #F3E8D5;
+            padding: 60px 20px;
+        }
+
+        .order-form {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(40, 75, 56, 0.08);
+        }
+
+        .order-form h2 {
+            color: #284B38;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .form-description {
+            color: #68685C;
+            text-align: center;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #284B38;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #D8D5C8;
+            border-radius: 9px;
+            font-family: inherit;
+            font-size: 14px;
+            background: #FBF8F1;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: 2px solid #B8B88A;
+            border-color: #284B38;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #284B38;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #C87941;
+        }
+
+        .notice {
+            max-width: 700px;
+            margin: 25px auto 0;
+            color: #68685C;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .order-cta {
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .order-cta h2 {
+            color: #284B38;
+            margin-bottom: 15px;
+        }
+
+        .order-cta p {
+            color: #68685C;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .order-button {
+            display: inline-block;
+            background: #C87941;
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .order-button:hover {
+            background: #284B38;
+        }
+
+        @media (max-width: 768px) {
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .order-hero h1 {
+                font-size: 32px;
+            }
+
+            .order-form {
+                padding: 25px 20px;
+            }
+ {
+    font-size: 32px;
+    font-weight: bold;
+    color: #284B38;
+    letter-spacing: 1px;
+}
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">JeYOGA</div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="profil.html">Profile</a>
+                <a href="products.html">Yoga Classes</a>
+                <a href="space.html">Yoga Space</a>
+                <a href="how-to-order.html" class="active">How to Order</a>
+                              <a href="kontak.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="order-hero">
+        <h1>How to Order</h1>
+        <p>
+            Starting your yoga journey is simple.
+            Choose your favorite class, find your perfect space,
+            and get ready to discover your balance with JeYOGA.
+        </p>
+    </section>
+
+    <section class="order-container">
+        <div class="order-heading">
+            <h2>Book Your Yoga Session</h2>
+            <p>Follow these three simple steps to plan your yoga experience.</p>
+        </div>
+
+        <div class="steps">
+
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Choose Your Class</h3>
+                <p>
+                    Jelajahi berbagai kelas yoga kami, mulai dari Hatha dan Vinyasa hingga Yin dan Restorative Yoga. Pilih kelas yang sesuai dengan minat dan tingkat pengalaman Anda.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Select Your Space</h3>
+                <p>
+                    Pilih suasana yoga yang Anda inginkan. Jelajahi berbagai konsep ruang, mulai dari modern, bernuansa laut, nyaman dan hangat, hingga tradisional.                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Send Your Booking Request</h3>
+                <p>
+                   Isi formulir pemesanan dengan data diri, jadwal yang diinginkan, dan layanan yang dipilih. Tim kami akan mengonfirmasi ketersediaan sesuai permintaan Anda.                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="order-form-section">
+        <form class="order-form"
+              onsubmit="sendBooking(event)">
+
+            <h2>Booking Request</h2>
+            <p class="form-description">
+                Complete the form below to plan your JeYOGA session.
+            </p>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Choose a Service</label>
+                <select id="service" required>
+                    <option value="">-- Select a service --</option>
+                    <option value="Hatha Yoga">Hatha Yoga</option>
+                    <option value="Vinyasa Yoga">Vinyasa Yoga</option>
+                    <option value="Yin Yoga">Yin Yoga</option>
+                    <option value="Power Yoga">Power Yoga</option>
+                    <option value="Restorative Yoga">Restorative Yoga</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="space">Preferred Yoga Space</label>
+                <select id="space" required>
+                    <option value="">-- Select a space --</option>
+                    <option value="Urban Space">Urban Space</option>
+                    <option value="Ocean Deck">Ocean Deck</option>
+                    <option value="Cozy Home">Cozy Home</option>
+                    <option value="Traditional Space">Traditional Space</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <select id="time" required>
+                    <option value="">-- Select a time --</option>
+                    <option value="Morning">Morning (08.00–10.00)</option>
+                    <option value="Afternoon">Afternoon (13.00–15.00)</option>
+                    <option value="Evening">Evening (16.00–18.00)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" rows="4"
+                    placeholder="Tell us about your preferences (optional)"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">
+                Submit Booking Request
+            </button>
+
+        </form>
+
+        <p class="notice">
+            Note: Submitting the form
+            will open your email application if one is configured.
+            Your booking is not confirmed until availability is checked.
+        </p>
+    </section>
+
+    <section class="order-cta">
+        <h2>Need More Information?</h2>
+        <p>
+            Have questions before booking?
+            Visit our contact page to learn more about JeYOGA.
+        </p>
+        <a href="kontak.html" class="order-button">Contact Us</a>
+    </section>
+
+    <footer>
+        <p>Find Your Flow, Wherever You Are.</p>
+        <p>&copy; 2026 JeYOGA. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function sendBooking(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const service = document.getElementById("service").value;
+            const space = document.getElementById("space").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const notes = document.getElementById("notes").value;
+
+            const subject = encodeURIComponent("JeYOGA Booking Request");
+
+            const message = encodeURIComponent(
+                "Hello JeYOGA!\n\n" +
+                "I would like to request a yoga booking.\n\n" +
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Yoga Class: " + service + "\n" +
+                "Yoga Space: " + space + "\n" +
+                "Preferred Date: " + date + "\n" +
+                "Preferred Time: " + time + "\n" +
+                "Additional Notes: " + (notes || "None") + "\n\n" +
+                "Please confirm the availability. Thank you!"
+            );
+
+            window.location.href =
+                "mailto:?subject=" + subject + "&body=" + message;
+        }
+    </script>
+
+</body>
+</html>
